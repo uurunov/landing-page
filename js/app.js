@@ -29,12 +29,41 @@ const section_bounding = [
 	section_div[2].getBoundingClientRect(),
 	section_div[3].getBoundingClientRect()
 ];
+const pageBottom = document.querySelector(".page__footer");
 
 /**
  * End Global Variables
  * Start Helper Functions
  *
 */
+
+function navLinkState(theLink, numOfLinks) {
+	for (let i=0; i<numOfLinks; i++)
+	{
+		if (navbar_list_items[i] === theLink)
+		{
+			navbar_list_items[i].classList.add("menu__link__active");
+		} else {
+			navbar_list_items[i].classList.remove("menu__link__active");
+		}
+	}
+}
+
+function addButtonToTop() {
+	const scroll = document.documentElement.scrollHeight - window.innerHeight;
+	const bottomPage = window.scrollY;
+	if (scroll >= bottomPage)
+	{
+		const topButton = document.createElement("p");
+		topButton.textContent = "Go Top";
+		topButton.classList.add("footer__button");
+		topButton.addEventListener("click", function()
+		{window.scrollTo({top:0, left:0, behavior: 'smooth'});});
+		pageBottom.appendChild(topButton);
+	} else {
+		document.querySelector(".footer__button").remove();
+	}
+}
 
 /**
  * End Helper Functions
@@ -77,6 +106,7 @@ function scrollToTarget(event)
 	{
 		if (event.target.textContent === section_div[i].parentElement.dataset.nav)
 		{
+			navLinkState(event.target, num_of_navbar_list_items);
 			window.scrollTo({
 				top:section_bounding[i].top + 50,
 				left:section_bounding[i].left,
@@ -101,6 +131,8 @@ document.addEventListener("DOMContentLoaded", buildNav(num_of_navbar_list_items)
 navbar_list.addEventListener('click', scrollToTarget);
 
 // Set sections as active
-window.addEventListener('scroll', addActiveClass());
+window.addEventListener('scroll', addActiveClass(0));
+window.addEventListener('scroll', addButtonToTop());
+
 
 

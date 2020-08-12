@@ -8,6 +8,7 @@
  *
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 /* ---- Base Rules ---- */
 body {
@@ -23,7 +24,10 @@ body {
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
-    margin: 2em 1rem;
+	margin: 2em 1rem;
+	word-spacing: 1px;
+	letter-spacing: 2px;
+	text-align: center;
 }
 
 @media only screen and (min-width: 35em){
@@ -37,12 +41,26 @@ h2 {
     border-bottom: 1px solid #cc1;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color: #fff;
+	color: rgb(255, 253, 159);
+	word-spacing: 1px;
+	letter-spacing: 2px;
 }
 
 p {
     line-height: 1.6em;
-    color: #eee;
+	color: #eee;
+	font-family: 'Roboto', sans-serif;
+	word-spacing: 1px;
+	letter-spacing: 2px;
+}
+
+blockquote {
+	border: 3px solid #cc1;
+	background: rgb(43, 43, 43);
+	padding: 10px;
+	word-spacing: 1px;
+	letter-spacing: 2px;
+	margin: 0;
 }
 
 /* ---- Layout Rules ---- */
@@ -67,7 +85,8 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+	text-align: center;
+	background: rgb(255, 253, 159);
 }
 
 .navbar__menu li {
@@ -88,6 +107,11 @@ section {
     transition: ease 0.3s all;
 }
 
+.navbar__menu .menu__link__active {
+	background: #333;
+	color: #fff;
+}
+
 /* Header Styles */
 .page__header {
     background: #fff;
@@ -101,11 +125,20 @@ section {
 .page__footer {
     background: #000;
     padding: 3em;
-    color: #fff;
+	color: #fff;
+	text-align: center;
 }
 
 .page__footer p{
-    color: #fff;
+	color: #fff;
+}
+
+.page__footer .footer__button {
+	border: 2px solid #fff;
+	background: rgb(255, 253, 159);
+	color: #000;
+	font-weight: bolder;
+	cursor: pointer;
 }
 
 
@@ -113,7 +146,7 @@ section {
 /* Landing Container Styles */
 .landing__container {
     padding: 1em;
-    text-align: left;
+    text-align: center;
 }
 
 @media only screen and (min-width: 35em){
@@ -126,7 +159,7 @@ section {
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right;
+    text-align: center;
 }
 
 /* Background Circles */
