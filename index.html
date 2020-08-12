@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Manipulating the DOM</title>
+		<!-- Load Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+		<!-- Load Styles -->
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<!-- HTML Follows BEM naming conventions. IDs are only used for sections to connect menu anchors to sections -->
+		<header class="page__header">
+			<nav class="navbar__menu">
+				<!-- Navigation starts as empty UL that will be populated with JS -->
+				<ul id="navbar__list"></ul>
+			</nav>
+		</header>
+
+		<main>
+			<header class="main__hero">
+				<h1>Computer Science </h1>
+			</header>
+
+			<!-- Each Section has an ID (used for the anchor) and a data attribute that will populate the li node. Adding more sections will automatically populate nav. The first section is set to active class by default -->
+			<section id="section1" data-nav="Introduction" class="your-active-class">
+				<div class="landing__container">
+					<h2>Introduction</h2>
+
+					<p>Computer science is the study of computers and computing concepts. It includes both hardware and software, as well as networking and the Internet. </p>
+
+					<p>The hardware aspect of computer science overlaps with electrical engineering. It covers the basic design of computers and the way they work. A fundamental understanding of how a computer "computes," or performs calculations, provides the foundation for comprehending more advanced concepts. For example, understanding how a computer operates in binary allows you to understand how computers add, subtract, and perform other operations. Learning about logic gates enables you to make sense of processor architecture.</p>
+
+					<p>The software side of computer science covers programming concepts as well as specific programming languages. Programming concepts include functions, algorithms, and source code design. Computer science also covers compilers, operating systems, and software applications. User-focused aspects of computer science include computer graphics and user interface design.</p>
+
+					<p>Since nearly all computers are now connected to the Internet, the computer science umbrella covers Internet technologies as well. This includes Internet protocols, telecommunications, and networking concepts. It also involves practical applications, such as web design and network administration.</p>
+				</div>
+			</section>
+
+			<section id="section2" data-nav="Paradigms">
+				<div class="landing__container">
+					<h2>Programming paradigms</h2>
+
+					<p>Programming languages can be used to accomplish different tasks in different ways. One of the 3 common programming paradigms is Functional programming, a style of building the structure and elements of computer programs that treat computation as the evaluation of mathematical functions and avoids state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. Another common programming paradigm is Imperative programming, a programming paradigm that uses statements that change a program's state. In much the same way that the imperative mood in natural languages expresses commands, an imperative program consists of commands for the computer to perform. Imperative programming focuses on describing how a program operates. Third common programming paradigm is Object-oriented programming, a programming paradigm based on the concept of "objects", which may contain data, in the form of fields, often known as attributes; and code, in the form of procedures, often known as methods. A feature of objects is that an object's procedures can access and often modify the data fields of the object with which they are associated. Thus Object-oriented computer programs are made out of objects that interact with one another.</p>
+
+					<p>Many languages offer support for multiple paradigms, making the distinction more a matter of style than of technical capabilities.</p>
+				</div>
+			</section>
+
+			<section id="section3" data-nav="Fields">
+				<div class="landing__container">
+					<h2>Fields</h2>
+
+					<blockquote cite="https://en.wikipedia.org/wiki/Computer_science#Fields">
+						Computer science is no more about computers than astronomy is about telescopes.
+						<p> — Edsger Dijkstra</p>
+					</blockquote>
+
+					<p>Its fields can be divided into theoretical and practical disciplines. Computational complexity theory is highly abstract, while computer graphics and computational geometry emphasizes real-world applications. Algorithmics is called the heart of computer science. Programming language theory considers approaches to the description of computational processes, while software engineering involves the use of programming languages and complex systems. Computer architecture and computer engineering deals with construction of computer components and computer-controlled equipment.</p>
+
+					<p>Human–computer interaction considers the challenges in making computers useful, usable, and accessible. Artificial intelligence aims to synthesize goal-orientated processes such as problem-solving, decision-making, environmental adaptation, motion planning, learning, and communication found in humans and animals.</p>
+				</div>
+			</section>
+
+			<section id="section4" data-nav="Education">
+				<div class="landing__container">
+					<h2>Education</h2>
+
+					<p>Computer science education or computing education is the science and art of teaching and learning of computer science, computing and computational thinking. As a subdiscipline of pedagogy it also addresses the wider impact of computer science in society through its intersection with philosophy, psychology, linguistics, natural sciences, and mathematics. In comparison to science education and mathematics education, computer science education is a much younger field. In the history of computing, digital computers were only built from around the 1940s – although computation has been around for centuries since the invention of analog computers.</p>
+
+					<p>Computer Science, known by its near synonyms, Computing, Computer Studies, Information Technology (IT) and Information and Computing Technology (ICT), has been taught in UK schools since the days of batch processing, mark sensitive cards and paper tape but usually to a select few students. In 1981, the BBC produced a micro-computer and classroom network and Computer Studies became common for GCE O level students (11–16-year-old), and Computer Science to A level students. Its importance was recognised, and it became a compulsory part of the National Curriculum, for Key Stage 3 & 4. In September 2014 it became an entitlement for all pupils over the age of 4. In the US, with 14,000 school districts deciding the curriculum, provision was fractured. According to a 2010 report by the Association for Computing Machinery (ACM) and Computer Science Teachers Association (CSTA), only 14 out of 50 states have adopted significant education standards for high school computer science.</p>
+
+					<p>Israel, New Zealand, and South Korea have included computer science in their national secondary education curricula, and several others are following.</p>
+				</div>
+			</section>
+		</main>
+
+		<footer class="page__footer">
+			<p>&copy Udacity</p>
+		</footer>
+
+		<script src="js/app.js"></script>
+	</body>
+</html>
