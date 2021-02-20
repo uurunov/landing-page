@@ -24,5 +24,5 @@
 - Code is formatted with consistent, logical, and easy-to-read formatting.
 
 ## Contact Details
-- Email: ulugbekurunov1997@mail.ru
+- Email: ulugbekurunov1997@gmail.com
 - LinkedIn: https://linkedin.com/in/uurunov
